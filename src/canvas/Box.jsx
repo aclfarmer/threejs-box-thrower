@@ -14,12 +14,6 @@ function Box({ setIsDragging, boxColor }) {
     
       const { camera, gl: { domElement } } = useThree();
   
-      //set camera to look diagonal at the box
-      useEffect(() => {
-        camera.position.set(70, 70, 70);
-        camera.lookAt(0, 0, 0);
-      }, [camera]);
-  
       useEffect(() => {
         const controls = new DragControls([meshRef.current], camera, domElement);
         controls.transformGroup = true;

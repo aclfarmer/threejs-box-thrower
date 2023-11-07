@@ -44,7 +44,7 @@ const CanvasModel = () => {
         <pointLight position={[-30, 49, 30]} color="white" intensity={10000}  castShadow />
 
         {/* this is your camera, its set as the default */ }
-        <Camera />
+        <Camera position={[70,70,70]}/> 
         <OrbitControls enabled={!isDragging} />
           <Physics>
             {boxes.map((box, index) => (
